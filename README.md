@@ -40,10 +40,12 @@ ____________
 
 
 
+**Also this a personal suggestion (No promotion). All the video or most videos in the links used throughout are on Youtube. To avoid those annoying ads try and use [Brave](https://brave.com) browser, it does not display Ads on any of the videos and is great for surfing videos on Youtube.**
 
 
 
 # Day 1 - Understanding Basics and Installing the Tools 
+
 First of all welcome everyone who has taken this pathway! Before getting started the traditional way, Let's first understand the terms used in Full Stack and understand a few basics before getting started.<br>
  The first day itself might seem long, but bear with us a little. It's not that hard.
 
@@ -113,31 +115,64 @@ This course starts from the very basics to installing vscode, using and leveragi
 - [Introduction To Responsive Web Design - Bootstrap](https://www.youtube.com/watch?v=srvUrASNj0s)- 4 Hours<br> Responsive design with HTML AND CSS.
 
 
-
 - [Sass (CSS) with Portfolio building project](https://www.youtube.com/watch?v=srvUrASNj0s)- 2 Hours<br> 
    * What is Sass? 
    Sass is a CSS pre-processor. Sass reduces repetition of CSS and therefore saves time. Read this before the video to get a better understanding of Saas. 
-
-<br>
+   <br>
 
 <img src="Saas.png" alt="post example" width="450px" height="300px"> <br>
 
-     
 
-
+- [Practice Projects](https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/) - 2 Hours each day<br> The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It's important that you do this by yourself, try best to not look at the code. 
 
 
 <br>
 
 ### Schedule
 
-So we have a lot to work with... yeah? Here...we are planning to utilize 2 hours from your precious 24 for HTML,CSS.
+So we have a lot to work with... yeah? Here...we are planning to utilize 2 hours from your precious 24 for HTML,CSS. The schedule is really light, Take it slow but try to dedicate at-least 2 hours everyday. (You will still be able to complete it even if you dont.)
 
-|   Day/Days |      Hours                         |
-| -----------| -----------                        |
-|  2         |   2 hours (start from 0)           |
-| 3 to 8     |   2 hours each day (freecodecamp)  |
-| 9 to 10    |   2 hours each for Kaggle          |
+|   Day/Days |      Hours                                    |
+| -----------| -----------                                   |
+|  2         |   HTML Full Course                            |
+| 3 to 9     |   Learn HTML5 AND CSS                         |
+| 12         |   Sass (CSS) with Portfolio building project] |
+| 13 - 20    |   7 Projects atleast ( One everyday )         |
 
 <br>
 <br>
+
+
+
+
+# Day 21 - 30  Java Script/ Vanilla JavaScript
+
+The term "Vanilla" is used to refer to pure Javascript or in simpler words plain javascript with any additional libraries. 
+<br>
+If you know any other language such as C, C++, Java or Python then JavaScript should be no brainer for you guys. It's easy and clean to understand. Let's start.
+
+- [Javascript from 0.](https://www.youtube.com/watch?v=PkZNo7MFNFg)- 3.5 Hours<br>
+This course is an absolute beast to get started with, made for beginners to start right from scratch. 
+
+JavaScript has no limits... not literally 😅, everything has a limit, But javascript is something that needs to be experimented with, you can make games, projects best designs. 
+
+- [15 Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4)- 8.5 Hour<br>This 8.5 hour video is lengthy but it's great to gets hands on javascript with various projects covering all major topics. 
+
+
+<br>
+
+### Schedule
+
+Folks the projects are important, make sure you do not miss out on/skip them. The schedule is stretched a little to make it easy and to implement everything beside the videos. Make sure you implement everything. 
+
+|   Day/Days |      Hours                                    |
+| -----------| -----------                                   |
+| 21-23      |   Javascript from 0.                          |
+| 24-30      |   15 Javascript Projects                      |
+
+<br>
+<br>
+
+
+# Day 31 -   React JS
+
