@@ -523,5 +523,5 @@ Heartfelt thanks ❤️ If you have stayed with us for 100days. We love your ded
 
 We will soon be setting up a form for your details and so that we can send you a cool certificate for your dedication, commitment and hard work throughout.
 
-Utkarsh
+Utkarsh<br>
 Founder 100days
