@@ -1,6 +1,6 @@
 <br>
 
-# 💯 [100days](https://100days.codes) of Full Stack Web Dev 
+# 💯 [100days](https://100days.codes){:target="_blank"} of Full Stack Web Dev 
 
 <br>
 
@@ -15,7 +15,7 @@
 <br>
 
 ## 🏁 RULES 
-Each day you will be sharing your progress as (example) Day 1/100 - Installing The tools and sharing what you learned and your experience either on LinkedIn or Twitter and tagging [our page](https://www.linkedin.com/company/100daysofficial) <br>
+Each day you will be sharing your progress as (example) Day 1/100 - Installing The tools and sharing what you learned and your experience either on LinkedIn or Twitter and tagging [our page](https://www.linkedin.com/company/100daysofficial){:target="_blank"} <br>
 **Do not** forget to use #hashtags - 
 - [#100daysofWebDev] 
 - [#100days]
@@ -31,7 +31,7 @@ Each day you will be sharing your progress as (example) Day 1/100 - Installing T
 <br>
 
 
-**Also this a personal suggestion (No promotion). All the video or most videos in the links used throughout are on Youtube. To avoid those annoying ads try and use [Brave](https://brave.com) browser, it does not display Ads on any of the videos and is great for surfing videos on Youtube.**
+**Also this a personal suggestion (No promotion). All the video or most videos in the links used throughout are on Youtube. To avoid those annoying ads try and use [Brave](https://brave.com){:target="_blank"} browser, it does not display Ads on any of the videos and is great for surfing videos on Youtube.**
 
 <br>
 <br>
@@ -45,11 +45,11 @@ Each day you will be sharing your progress as (example) Day 1/100 - Installing T
 
 **Before we start Day 1, This pathway assumes that you are aware of git i.e version control systems. So if you arent familiar with Git and how it works, let's get you started right away.**
 
-- [Version Control System Introduction](https://www.youtube.com/watch?v=zbKdDsNNOhg)
+- [Version Control System Introduction](https://www.youtube.com/watch?v=zbKdDsNNOhg){:target="_blank"}
 
-- [Git and Github Crash Course](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+- [Git and Github Crash Course](https://www.youtube.com/watch?v=SWYqp7iY_Tc){:target="_blank"}
 
-- [Learn Git in 20 minutes](https://youtu.be/Y9XZQO1n_7c?t=21)
+- [Learn Git in 20 minutes](https://youtu.be/Y9XZQO1n_7c?t=21){:target="_blank"}
 
 <br>
 <br>
@@ -87,7 +87,7 @@ JavaScript is a programming language that was designed to run in the browser. Us
 
 
 **Read**
-Now that we understand the term "Full Stack better", here's a link to one of the best resources out there to understand every term that will be used in Web Development. [Link](https://www.w3schools.com/whatis/whatis_http.asp) 
+Now that we understand the term "Full Stack better", here's a link to one of the best resources out there to understand every term that will be used in Web Development. [Link](https://www.w3schools.com/whatis/whatis_http.asp){:target="_blank"} 
 
 <br>
 <img src="Day1w3.png" alt="post example" width="450px" height="300px"> 
