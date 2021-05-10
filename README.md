@@ -7,7 +7,7 @@
 
 ## 📍 Before starting
 
-**✔️ Make sure you update/add your title as "Participant" in 100days for duration of 3 months under the professional experience section on LikedIn. It's absolutely fine if you use "Participant" title in the volunteering section too.** 
+**✔️ Make sure you update/add your title as "Participant" in 100days for a duration of 3 months under the professional experience section on LinkedIn.. It's absolutely fine if you use "Participant" title in the volunteering section too.** 
 <br>
 
 **✔️ ⭐️ Star the repo? Cause why not 😅 😊** 
@@ -43,7 +43,7 @@ Each day you will be sharing your progress as (example) Day 1/100 - Installing T
 
 # ⚠️ Prerequisite - Version Control Systems and Git
 
-**Before we start we Day 1, This pathway assumes that you are aware of git i.e version control systems. So if you arent familiar with Git and how it works, let's get you started right away.**
+**Before we start Day 1, This pathway assumes that you are aware of git i.e version control systems. So if you arent familiar with Git and how it works, let's get you started right away.**
 
 - [Version Control System Introduction](https://www.youtube.com/watch?v=zbKdDsNNOhg)
 
@@ -59,7 +59,7 @@ Each day you will be sharing your progress as (example) Day 1/100 - Installing T
 # ✅ Day 1 - Understanding Basics and Installing the Tools 
 
 First of all welcome everyone who has taken this pathway! Before getting started the traditional way, Let's first understand the terms used in Full Stack and understand a few basics before getting started.<br>
- The first day itself might seem long, but bear with us a little. It's not that hard.
+ The first day itself might seem long but bear with us a little. It's not that hard.
 
 <br>
 
@@ -83,11 +83,11 @@ JavaScript is a programming language that was designed to run in the browser. Us
 
 3. Basic back-end<br>
   * The core concern of back-end developers is creating applications that can find and deliver data to the front end.<br>
-  * Many of them use reliable enterprise-level databases like Oracle, Teradata, Microsoft SQL Server, IBM DB2, EnterpriseDB and SAP Sybase ASE. There’s also a number of other popular databases including MySQL, NoSQL and PostgreSQL.
+  * Many of them use reliable enterprise-level databases like Oracle, Teradata, Microsoft SQL Server, IBM DB2, EnterpriseDB and SAP Sybase ASE. There’s also several popular databases including MySQL, NoSQL and PostgreSQL.
 
 
 **Read**
-Now that we understand the term "Full Stack better", here's a link to one of the best resources out there to understand each and every term that will be used in Web Development. [Link](https://www.w3schools.com/whatis/whatis_http.asp) 
+Now that we understand the term "Full Stack better", here's a link to one of the best resources out there to understand every term that will be used in Web Development. [Link](https://www.w3schools.com/whatis/whatis_http.asp) 
 
 <br>
 <img src="Day1w3.png" alt="post example" width="450px" height="300px"> 
@@ -106,7 +106,7 @@ Once done with giving all of that ☝🏼 a read. Let's talk about the IDE we wi
 
 - [Vs Code](https://code.visualstudio.com/download)
 
-Single handedly the best code editor, does not need extra setup for handling front end at all. You are free to use Sublime Text OR any other code editor for that matter too. Given that we will be focusing on the languages, IDE's wont really matter.
+Single-handedly the best code editor, does not need extra setup for handling the front end at all. You are free to use Sublime Text OR any other code editor for that matter too. Given that we will be focusing on the languages, IDE's won't matter.
 
 
 
@@ -118,10 +118,10 @@ Single handedly the best code editor, does not need extra setup for handling fro
 I feel one of the best ways to learn coding languages is to rather do the implementation side by side with learning rather than just reading it like high school biology. Let's get started without wasting any time. 
 
 - [HTML Full Course - Building a website](https://www.youtube.com/watch?v=pQN-pnXPaVg&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=3)- 2 Hours<br>
-This course is great for starting, it's easy its simple. Also don't rush to understand things in one go. The next video is of 11 Hours that will definitely cover everything. I would request you'll to just treat this as a video lessons and remember the things your do not  understand. The next video definitely will help you to clear your doubts.
+This course is great for starting, its easy its simple. Also, don't rush to understand things in one go. The next video is of 11 Hours that will definitely cover everything. I would request you'll to just treat this as a video lesson and remember the things you do not  understand. The next video definitely will help you to clear your doubts.
 <br> 
 
-- [Learn HTML5 AND CSS](https://www.youtube.com/watch?v=mU6anWqZJcc&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=1)- 11 Hours<br> Amazing amazing..... Literally Freecodecamp is better than anything else out there in a few courses, WebDev is definitely one of them.<br>
+- [Learn HTML5 AND CSS](https://www.youtube.com/watch?v=mU6anWqZJcc&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=1)- 11 Hours<br> Amazing amazing..... Literally, Freecodecamp is better than anything else out there in a few courses, WebDev is definitely one of them.<br>
 This course starts from the very basics to installing vscode, using and leveraging inspect element tool. 11 Hours for this is worth it. 
 
 - [Introduction To Responsive Web Design - Bootstrap](https://www.youtube.com/watch?v=srvUrASNj0s)- 4 Hours<br> Responsive design with HTML AND CSS.
@@ -129,27 +129,27 @@ This course starts from the very basics to installing vscode, using and leveragi
 
 - [Sass (CSS) with Portfolio building project](https://www.youtube.com/watch?v=srvUrASNj0s)- 2 Hours<br> 
    * What is Sass? 
-   Sass is a CSS pre-processor. Sass reduces repetition of CSS and therefore saves time. Read this before the video to get a better understanding of Saas. 
+   Sass is a CSS pre-processor. Sass reduces the repetition of CSS and therefore saves time. Read this before the video to get a better understanding of Saas. 
    <br>
 
 <img src="Saas.png" alt="post example" width="450px" height="300px"> <br>
 
 
-- [Practice Projects](https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/) - 2 Hours each day<br> The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It's important that you do this by yourself, try best to not look at the code. 
+- [Practice Projects](https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/) - 2 Hours each day<br> The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It's important that you do this by yourself, try your best to not look at the code. 
 
 
 <br>
 
 ### 🗓 Schedule
 
-So we have a lot to work with... yeah? Here...we are planning to utilize 2 hours from your precious 24 for HTML,CSS. The schedule is really light, Take it slow but try to dedicate at-least 2 hours everyday. (You will still be able to complete it even if you dont.)
+So we have a lot to work with... yeah? Here...we are planning to utilize 2 hours from your precious 24 for HTML, CSS. The schedule is really light, Take it slow but try to dedicate at least 2 hours every day. (You will still be able to complete it even if you do not.)
 
 |   Day/Days |      Hours                                    |
 | -----------| -----------                                   |
 |  2         |   HTML Full Course                            |
 | 3 to 9     |   Learn HTML5 AND CSS                         |
 | 12         |   Sass (CSS) with Portfolio building project] |
-| 13 - 20    |   7 Projects atleast ( One everyday )         |
+| 13 - 20    |   7 Projects at least ( One every day )         |
 
 <br>
 <br>
@@ -168,14 +168,14 @@ This course is an absolute beast to get started with, made for beginners to star
 
 JavaScript has no limits... not literally 😅, everything has a limit, But javascript is something that needs to be experimented with, you can make games, projects best designs. 
 
-- [15 Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4)- 8.5 Hour<br>This 8.5 hour video is lengthy but it's great to gets hands on javascript with various projects covering all major topics. 
+- [15 Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4)- 8.5 Hour<br>This 8.5 hour video is lengthy but its great to get hands-on javascript with various projects covering all major topics. 
 
 
 <br>
 
 ### 🗓 Schedule
 
-Folks the projects are important, make sure you do not miss out on/skip them. The schedule is stretched a little to make it easy and to implement everything beside the videos. Make sure you implement everything. 
+Folks the projects are important, make sure you do not miss out on/skip them. The schedule is stretched a little to make it easy and to implement everything along with the videos. Make sure you implement everything. 
 
 |   Day/Days |      Hours                                    |
 | -----------| -----------                                   |
@@ -192,9 +192,9 @@ Folks the projects are important, make sure you do not miss out on/skip them. Th
 <br>
 <br>
 
-# ✅ Day 32 TO 36  JS AJAX, JSON, WEB APIS
+# ✅ Day 32 TO 36  JS AJAX, JSON, WeB APIS
 
-Now let's start with understanding AJAX followed by understanding Json files and APIS. WE will use W3schools and a video here to clear our concepts.
+Now let's start with understanding AJAX followed by understanding Json files and APIS. We will use W3schools and a video here to clear our concepts.
 
 - [JS AJAX](https://www.w3schools.com/js/js_ajax_intro.asp)
 
@@ -217,7 +217,7 @@ It's all reading, can't force you to sit for 4 hours and finish it in a go right
 
 |   Day/Days |      Hours                                    |
 | -----------| -----------                                   |
-|   32-33    |    AJAX JSON WEB APIS - W3schools             |
+|   32-33    |    AJAX JSON WeB APIS - W3schools             |
 |    34      |    JSON AND AJAX Tutorial                     |
 |    35-36   |    API'S                                      |
 
@@ -238,7 +238,7 @@ Read this document to understand jQuery API. [Link](https://api.jquery.com).
 
 ### 🗓 Schedule
 
-It's all reading, can't force you to sit for 4 hours and finish it in a go right ?
+It's all reading, can't force you to sit for 4 hours and finish it in a go.
 
 |   Day/Days |      Hours                                    |
 | -----------| -----------                                   |
@@ -259,7 +259,7 @@ It's all reading, can't force you to sit for 4 hours and finish it in a go right
 
 ### 🗓 Schedule
 
-Schedule is kept super light you will hardly sit for 1 hour everyday, but make sure you are implementing too while watching the videos.
+The schedule is kept super light you will hardly sit for 1 hour every day, but make sure you are implementing them too while watching the videos.
 
 |   Day/Days |      Hours                   |
 | -----------| -----------                  |
@@ -273,9 +273,9 @@ Schedule is kept super light you will hardly sit for 1 hour everyday, but make s
 
 # ✅ Day 56 to 66 -  Redux
 
-One of the best ways to learn about something is to get the info from the official site itself. But to sum it all up - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger. (Source: redux.js.org)<br>
+One of the best ways to learn about something is to get the info from the official site itself. But to sum it all up - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time-traveling debugger. (Source: redux.js.org)<br>
 
-- [Tutorial - Reading](https://redux.js.org/tutorials/index)- 3 Hours<br> Follow the order shown in the picture. The tutorial follow top to down approach explaining about Redux in the correct order.
+- [Tutorial - Reading](https://redux.js.org/tutorials/index)- 3 Hours<br> Follow the order shown in the picture. The tutorial follows top to down approach explaining Redux in the correct order.
 
 <img src="redux.png" alt="post example" width="450px" height="300px">
 
@@ -303,11 +303,11 @@ One of the best ways to learn about something is to get the info from the offici
 
 # ✅ Day 66 to 70 -  Node.js, NPM, Rest API's, MongoDb, Docker, Angular 
 
-Node.js before was used as a back-end, but looking at the trend it shifted to front end because of it's functionalities and one the best one being Node Package Manager (NPM) which is used to manage dependencies of projects. <br>
+Node.js before was used as a back-end, but looking at the trend it shifted to the front end because of its functionalities and one the best one being Node Package Manager (NPM) which is used to manage dependencies of projects. <br>
 
 - [Node Official Guide](https://nodejs.org/en/docs/guides/)<br>
 
-Now the title was quite big. What if i told you there is a video out there that covers all those topics in a single video? 
+Now the title was quite big. What if I told you there is a video out there that covers all those topics in a single video? 
 
 
 - [Node JS Complete](https://www.youtube.com/watch?v=RLtyhwFtXQA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=11)- 3 Hours br>
@@ -338,7 +338,7 @@ Now that we have completed our front end path, let's come to back end. What exac
 3. Working with Version Control Systems (VCS) like git for managing and deploying builds
 
 
-One of best parts that you do not realize is that we already have covered JavaScript which the ranked #1 as a backend programming language. If you want to still learn a other language you are most welcome to.
+One of the best parts that you do not realize is that we have already covered JavaScript which the ranked #1 as a backend programming language. If you want to still learn another language you are most welcome to.
 
 
 <br>
@@ -366,7 +366,7 @@ SQL is a goto and a must when it comes to database management systems. You can a
 What is N-GIN-X ?<BR>
 Click [here](https://www.youtube.com/watch?v=JKxlsvZXG7c) to understand it in 100 seconds.<br>
 
-This is skill which is a must have if you really want to ace back end. It is so much in demand in the web industry that their own official page charges for it's courses. 
+This is a skill that is a must have if you really want to ace back end. It is so much in demand in the web industry that their own official page charges for its courses. 
 
 - [NGINX - Article](https://kinsta.com/knowledgebase/what-is-nginx/)  - 10 Minutes<br>
 - [NGINX Tutorial](https://www.youtube.com/watch?v=GGS6KMRbONo&t=9280s) - 3 Hours <br>
@@ -389,7 +389,7 @@ This is skill which is a must have if you really want to ace back end. It is so 
 
 # ✅ Day 79 to 85 - Deployment 
 
-Deployment and the services offered by the companies, THERE'S SO MANY! I have compiled a list of best resources to make you understand how all of it works overall. Also if you have already hosted your own website online using any of the services like netlify or digital ocean or azure or aws, you already know most of it! <br>
+Deployment and the services offered by the companies, THERE'S SO MANY! I have compiled a list of tbe best resources to make you understand how all of it works overall. Also if you have already hosted your own website online using any of the services like netlify or digital ocean or azure or aws, you already know most of it! <br>
 
 - [Deploying a Web App with Docker & Github Actions][https://www.youtube.com/watch?v=JsOoUrII3EY&t=0s] - Part 1 - 25 Mins
 
@@ -398,7 +398,7 @@ Deployment and the services offered by the companies, THERE'S SO MANY! I have co
 - [Project - Building an Online Store](https://www.youtube.com/watch?v=JgwI22y_eFA) - 1 Hour<br> In this video focus on connecting cloud resources using React app. 
 
 - [Deploying on Netlify](https://www.youtube.com/watch?v=bjVUqvcCnxM)- 22 Mins<br>
-Ever heard of Netlify? It's one of the best one's out there and I hosted 100days.codes . It lets you deploy your builds directly from GitHub. It's crazy I know! 
+Ever heard of Netlify? It's one of the best one's out there and I hosted 100days.codes using on Netlify . It lets you deploy your builds directly from GitHub. It's crazy I know! 
 
 - [Deploying Node.JS webstie on Heroku](https://www.youtube.com/watch?v=r2S89Hm1Uq0)- 8 Mins
 
@@ -429,7 +429,7 @@ Ever heard of Netlify? It's one of the best one's out there and I hosted 100days
 
 # 💯🔥 Day 86 to 100 - Projects 
 
-**Remember** you may find of literally every project online, but that does not mean that you need to copy and paste everything..always remember the as to why you took the 100days #challenge in the first place. 🔥
+**Remember** you may find of literally every project online, but that does not mean that you need to copy and paste everything..always remember as to why you took the 100days #challenge in the first place. 🔥
 
 <br>
 
@@ -459,7 +459,7 @@ ____________________________
 ### Advanced Projects 
 <br>
 
-Projects listed below are open-source projects so you can definitely study then and use the code....who knows you might end up with something new of your own? 😎 
+The projects listed below are open-source projects so you can definitely study them and use the code....who knows you might end up with something new of your own? 😎 
 
 
 - [PRETTIER](https://github.com/prettier/prettier) - Code formatter.
