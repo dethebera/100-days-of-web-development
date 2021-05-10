@@ -104,7 +104,7 @@ Now that we understand the term "Full Stack better", here's a link to one of the
 
 Once done with giving all of that ☝🏼 a read. Let's talk about the IDE we will use..
 
-- [Vs Code](https://code.visualstudio.com/download)
+- [Vs Code](https://code.visualstudio.com/download){:target="_blank"}
 
 Single-handedly the best code editor, does not need extra setup for handling the front end at all. You are free to use Sublime Text OR any other code editor for that matter too. Given that we will be focusing on the languages, IDE's won't matter.
 
@@ -117,17 +117,17 @@ Single-handedly the best code editor, does not need extra setup for handling the
 
 I feel one of the best ways to learn coding languages is to rather do the implementation side by side with learning rather than just reading it like high school biology. Let's get started without wasting any time. 
 
-- [HTML Full Course - Building a website](https://www.youtube.com/watch?v=pQN-pnXPaVg&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=3)- 2 Hours<br>
+- [HTML Full Course - Building a website](https://www.youtube.com/watch?v=pQN-pnXPaVg&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=3{:target="_blank"})- 2 Hours<br>
 This course is great for starting, its easy its simple. Also, don't rush to understand things in one go. The next video is of 11 Hours that will definitely cover everything. I would request you'll to just treat this as a video lesson and remember the things you do not  understand. The next video definitely will help you to clear your doubts.
 <br> 
 
-- [Learn HTML5 AND CSS](https://www.youtube.com/watch?v=mU6anWqZJcc&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=1)- 11 Hours<br> Amazing amazing..... Literally, Freecodecamp is better than anything else out there in a few courses, WebDev is definitely one of them.<br>
+- [Learn HTML5 AND CSS](https://www.youtube.com/watch?v=mU6anWqZJcc&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=1){:target="_blank"}- 11 Hours<br> Amazing amazing..... Literally, Freecodecamp is better than anything else out there in a few courses, WebDev is definitely one of them.<br>
 This course starts from the very basics to installing vscode, using and leveraging inspect element tool. 11 Hours for this is worth it. 
 
 - [Introduction To Responsive Web Design - Bootstrap](https://www.youtube.com/watch?v=srvUrASNj0s)- 4 Hours<br> Responsive design with HTML AND CSS.
 
 
-- [Sass (CSS) with Portfolio building project](https://www.youtube.com/watch?v=srvUrASNj0s)- 2 Hours<br> 
+- [Sass (CSS) with Portfolio building project](https://www.youtube.com/watch?v=srvUrASNj0s){:target="_blank"}- 2 Hours<br> 
    * What is Sass? 
    Sass is a CSS pre-processor. Sass reduces the repetition of CSS and therefore saves time. Read this before the video to get a better understanding of Saas. 
    <br>
@@ -135,7 +135,7 @@ This course starts from the very basics to installing vscode, using and leveragi
 <img src="Saas.png" alt="post example" width="450px" height="300px"> <br>
 
 
-- [Practice Projects](https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/) - 2 Hours each day<br> The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It's important that you do this by yourself, try your best to not look at the code. 
+- [Practice Projects](https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/){:target="_blank"} - 2 Hours each day<br> The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It's important that you do this by yourself, try your best to not look at the code. 
 
 
 <br>
@@ -163,12 +163,12 @@ The term "Vanilla" is used to refer to pure Javascript or in simpler words plain
 <br>
 If you know any other language such as C, C++, Java or Python then JavaScript should be no brainer for you guys. It's easy and clean to understand. Let's start.
 
-- [Javascript from 0.](https://www.youtube.com/watch?v=PkZNo7MFNFg)- 3.5 Hours<br>
+- [Javascript from 0.](https://www.youtube.com/watch?v=PkZNo7MFNFg{:target="_blank"})- 3.5 Hours<br>
 This course is an absolute beast to get started with, made for beginners to start right from scratch. 
 
 JavaScript has no limits... not literally 😅, everything has a limit, But javascript is something that needs to be experimented with, you can make games, projects best designs. 
 
-- [15 Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4)- 8.5 Hour<br>This 8.5 hour video is lengthy but its great to get hands-on javascript with various projects covering all major topics. 
+- [15 Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4){:target="_blank"}- 8.5 Hour<br>This 8.5 hour video is lengthy but its great to get hands-on javascript with various projects covering all major topics. 
 
 
 <br>
@@ -196,16 +196,16 @@ Folks the projects are important, make sure you do not miss out on/skip them. Th
 
 Now let's start with understanding AJAX followed by understanding Json files and APIS. We will use W3schools and a video here to clear our concepts.
 
-- [JS AJAX](https://www.w3schools.com/js/js_ajax_intro.asp)
+- [JS AJAX](https://www.w3schools.com/js/js_ajax_intro.asp){:target="_blank"}
 
-- [JS JSON](https://www.w3schools.com/js/js_json_intro.asp)
+- [JS JSON](https://www.w3schools.com/js/js_json_intro.asp){:target="_blank"}
 
-- [JS Web APIs](https://www.w3schools.com/js/js_api_intro.asp)
+- [JS Web APIs](https://www.w3schools.com/js/js_api_intro.asp){:target="_blank"}
 
-- [JSON AND AJAX Tutorial](https://www.youtube.com/watch?v=rJesac0_Ftw)- 40 mins<br>
+- [JSON AND AJAX Tutorial](https://www.youtube.com/watch?v=rJesac0_Ftw){:target="_blank"}- 40 mins<br>
 The video is hardly 40 mins but make sure you use implement the examples side by side. 
 
-- [API'S for beginners](https://www.youtube.com/watch?v=GZvSYJDk-us) - 2.5 Hours<br>
+- [API'S for beginners](https://www.youtube.com/watch?v=GZvSYJDk-us){:target="_blank"} - 2.5 Hours<br>
  Best one out there to understand the use of API'S.. If you want to know how is Js involved in all this.. wait till the end of the video. 
 
 
@@ -231,9 +231,9 @@ It's all reading, can't force you to sit for 4 hours and finish it in a go right
 
 jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. (Source: jQuery.com) <br>
 
-Read this document to understand jQuery API. [Link](https://api.jquery.com). 
+Read this document to understand jQuery API. [Link](https://api.jquery.com){:target="_blank"}. 
 
-- [jQuery](https://www.freecodecamp.org/learn/front-end-libraries/#jquery) - 18 courses<br> Click on the link wait for a few seconds, it will directly take you to jQuery section 18 short courses are there, easily doable in 5 days.
+- [jQuery](https://www.freecodecamp.org/learn/front-end-libraries/#jquery){:target="_blank"} - 18 courses<br> Click on the link wait for a few seconds, it will directly take you to jQuery section 18 short courses are there, easily doable in 5 days.
 <br>
 
 ### 🗓 Schedule
@@ -253,9 +253,9 @@ It's all reading, can't force you to sit for 4 hours and finish it in a go.
 
 **Read [this](https://www.framer.com/blog/posts/react-vs-vanilla-js/) article to understand the difference between React and Vanilla/Plain Js.** <br>
 
-- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)- 2-3 Hours
+- [React Tutorial](https://reactjs.org/tutorial/tutorial.html){:target="_blank"}- 2-3 Hours
 
-- [React Full Course](https://www.youtube.com/watch?v=4UZrsTqkcW4)- 10 Hours<br>
+- [React Full Course](https://www.youtube.com/watch?v=4UZrsTqkcW4){:target="_blank"}- 10 Hours<br>
 
 ### 🗓 Schedule
 
@@ -275,18 +275,18 @@ The schedule is kept super light you will hardly sit for 1 hour every day, but m
 
 One of the best ways to learn about something is to get the info from the official site itself. But to sum it all up - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time-traveling debugger. (Source: redux.js.org)<br>
 
-- [Tutorial - Reading](https://redux.js.org/tutorials/index)- 3 Hours<br> Follow the order shown in the picture. The tutorial follows top to down approach explaining Redux in the correct order.
+- [Tutorial - Reading](https://redux.js.org/tutorials/index){:target="_blank"}- 3 Hours<br> Follow the order shown in the picture. The tutorial follows top to down approach explaining Redux in the correct order.
 
 <img src="redux.png" alt="post example" width="450px" height="300px">
 
 <br>
 <br>
 
-- [Redux Fundamentals](https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867)- 2 Hours<br> This course from the creator of Redux is free and should get you started with understanding redux better. 
+- [Redux Fundamentals](https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867){:target="_blank"}- 2 Hours<br> This course from the creator of Redux is free and should get you started with understanding redux better. 
 
-- [Redux Crash Course](https://www.youtube.com/watch?v=93p3LxR9xfM) - 1 Hour 
+- [Redux Crash Course](https://www.youtube.com/watch?v=93p3LxR9xfM{:target="_blank"})- 1 Hour 
 
-- [Redux Exercise on FreeCodecamp](https://www.freecodecamp.org/learn/front-end-libraries/#react-and-redux)- Self paced
+- [Redux Exercise on FreeCodecamp](https://www.freecodecamp.org/learn/front-end-libraries/#react-and-redux){:target="_blank"}- Self paced
 
 
 ### 🗓 Schedule
@@ -305,15 +305,15 @@ One of the best ways to learn about something is to get the info from the offici
 
 Node.js before was used as a back-end, but looking at the trend it shifted to the front end because of its functionalities and one the best one being Node Package Manager (NPM) which is used to manage dependencies of projects. <br>
 
-- [Node Official Guide](https://nodejs.org/en/docs/guides/)<br>
+- [Node Official Guide](https://nodejs.org/en/docs/guides/){:target="_blank"}<br>
 
 Now the title was quite big. What if I told you there is a video out there that covers all those topics in a single video? 
 
 
-- [Node JS Complete](https://www.youtube.com/watch?v=RLtyhwFtXQA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=11)- 3 Hours br>
+- [Node JS Complete](https://www.youtube.com/watch?v=RLtyhwFtXQA&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=11){:target="_blank"}- 3 Hours br>
 
 
-- [Node.js Full Course](https://www.youtube.com/watch?v=JnvKXcSI7yk) - 7 Hours <br>
+- [Node.js Full Course](https://www.youtube.com/watch?v=JnvKXcSI7yk){:target="_blank"}- 7 Hours <br>
 Covers NPM, Rest API's, MongoDB, Docker, Angular. (MEAN Stack)
 
 ### 🗓 Schedule
@@ -348,7 +348,7 @@ One of the best parts that you do not realize is that we have already covered Ja
 
 SQL is a goto and a must when it comes to database management systems. You can also use NoSQL too. 
 
-- [SQL Complete Course](https://www.youtube.com/watch?v=HXV3zeQKqGY&t=1s)
+- [SQL Complete Course](https://www.youtube.com/watch?v=HXV3zeQKqGY&t=1s){:target="_blank"}
 
 
 ### 🗓 Schedule
@@ -364,14 +364,14 @@ SQL is a goto and a must when it comes to database management systems. You can a
 # ✅ Day 75 to 78 - NGINX 
 
 What is N-GIN-X ?<BR>
-Click [here](https://www.youtube.com/watch?v=JKxlsvZXG7c) to understand it in 100 seconds.<br>
+Click [here](https://www.youtube.com/watch?v=JKxlsvZXG7c){:target="_blank"} to understand it in 100 seconds.<br>
 
 This is a skill that is a must have if you really want to ace back end. It is so much in demand in the web industry that their own official page charges for its courses. 
 
-- [NGINX - Article](https://kinsta.com/knowledgebase/what-is-nginx/)  - 10 Minutes<br>
-- [NGINX Tutorial](https://www.youtube.com/watch?v=GGS6KMRbONo&t=9280s) - 3 Hours <br>
+- [NGINX - Article](https://kinsta.com/knowledgebase/what-is-nginx/){:target="_blank"}  - 10 Minutes<br>
+- [NGINX Tutorial](https://www.youtube.com/watch?v=GGS6KMRbONo&t=9280s){:target="_blank"} - 3 Hours <br>
 **OR** /  **both** Either use one or both. 
-- [NginX Crash Course ](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=15s) - 2 Hours
+- [NginX Crash Course ](https://www.youtube.com/watch?v=hcw-NjOh8r0&t=15s){:target="_blank"} - 2 Hours
 
 
 ### 🗓 Schedule
@@ -391,18 +391,18 @@ This is a skill that is a must have if you really want to ace back end. It is so
 
 Deployment and the services offered by the companies, THERE'S SO MANY! I have compiled a list of tbe best resources to make you understand how all of it works overall. Also if you have already hosted your own website online using any of the services like netlify or digital ocean or azure or aws, you already know most of it! <br>
 
-- [Deploying a Web App with Docker & Github Actions][https://www.youtube.com/watch?v=JsOoUrII3EY&t=0s] - Part 1 - 25 Mins
+- [Deploying a Web App with Docker & Github Actions](https://www.youtube.com/watch?v=JsOoUrII3EY&t=0s){:target="_blank"} - Part 1 - 25 Mins
 
-- [Deploying a Web App to Digital Ocean with Docker & Nginx][https://www.youtube.com/watch?v=hf8wUUrGCgU] - Part 2 - 43 Mins
+- [Deploying a Web App to Digital Ocean with Docker & Nginx](https://www.youtube.com/watch?v=hf8wUUrGCgU){:target="_blank"} - Part 2 - 43 Mins
 
-- [Project - Building an Online Store](https://www.youtube.com/watch?v=JgwI22y_eFA) - 1 Hour<br> In this video focus on connecting cloud resources using React app. 
+- [Project - Building an Online Store](https://www.youtube.com/watch?v=JgwI22y_eFA){:target="_blank"} - 1 Hour<br> In this video focus on connecting cloud resources using React app. 
 
-- [Deploying on Netlify](https://www.youtube.com/watch?v=bjVUqvcCnxM)- 22 Mins<br>
+- [Deploying on Netlify](https://www.youtube.com/watch?v=bjVUqvcCnxM){:target="_blank"}- 22 Mins<br>
 Ever heard of Netlify? It's one of the best one's out there and I hosted 100days.codes using on Netlify . It lets you deploy your builds directly from GitHub. It's crazy I know! 
 
-- [Deploying Node.JS webstie on Heroku](https://www.youtube.com/watch?v=r2S89Hm1Uq0)- 8 Mins
+- [Deploying Node.JS webstie on Heroku](https://www.youtube.com/watch?v=r2S89Hm1Uq0){:target="_blank"}- 8 Mins
 
-- [E Commerce application deployment on Azure](https://www.youtube.com/watch?v=Bm5wJTQFzsE)- 2 Hours
+- [E Commerce application deployment on Azure](https://www.youtube.com/watch?v=Bm5wJTQFzsE){:target="_blank"}- 2 Hours
 
 **This is the only place in the whole course I will ask you to research a little on your own or if you are confident then take a few days off because the last 15 Days are all about full scale projects.** 
 
@@ -437,21 +437,21 @@ Ever heard of Netlify? It's one of the best one's out there and I hosted 100days
 
 **Don't skip these...**
 _________________________
-- [JavaScript Clock](https://codepen.io/codifiedconcepts/pen/bwgxRq)
+- [JavaScript Clock](https://codepen.io/codifiedconcepts/pen/bwgxRq){:target="_blank"}
 
-- [Javascript Tip Calculator](https://codepen.io/cphemm/pen/reNwWd)
+- [Javascript Tip Calculator](https://codepen.io/cphemm/pen/reNwWd){:target="_blank"}
 
-- [Animated Nav Toggle & Menu](https://codepen.io/cphemm/pen/reNwWd)
+- [Animated Nav Toggle & Menu](https://codepen.io/cphemm/pen/reNwWd){:target="_blank"}
 
-- [CodePen Home Interactive Map with Jquery BY Sara B.](https://codepen.io/aomyers/pen/LWOwpR)
+- [CodePen Home Interactive Map with Jquery BY Sara B.](https://codepen.io/aomyers/pen/LWOwpR){:target="_blank"}
 
-- [CodePen Home Pickle Rick Maze Game](https://codepen.io/TheCodeDepository/pen/jKBaoN?page=8)
+- [CodePen Home Pickle Rick Maze Game](https://codepen.io/TheCodeDepository/pen/jKBaoN?page=8){:target="_blank"}
 
-- [Happy bouncing balls](https://codepen.io/b4rb4tron/pen/wjyXNJ)
+- [Happy bouncing balls](https://codepen.io/b4rb4tron/pen/wjyXNJ){:target="_blank"}
 
-- [CodePen Home I2Djs - SVG - Infinite rainbow](https://codepen.io/nswamy14/pen/MXoZjg?page=1&)
+- [CodePen Home I2Djs - SVG - Infinite rainbow](https://codepen.io/nswamy14/pen/MXoZjg?page=1&){:target="_blank"}
 
-- [TO-do list](https://codepen.io/JohnPaulFich/pen/MXmzzM)
+- [TO-do list](https://codepen.io/JohnPaulFich/pen/MXmzzM){:target="_blank"}
 ____________________________
 
 <br>
@@ -462,19 +462,19 @@ ____________________________
 The projects listed below are open-source projects so you can definitely study them and use the code....who knows you might end up with something new of your own? 😎 
 
 
-- [PRETTIER](https://github.com/prettier/prettier) - Code formatter.
+- [PRETTIER](https://github.com/prettier/prettier){:target="_blank"} - Code formatter.
 
-- [Terminalizer](https://terminalizer.com) - Make gifs of your code in terminal for tutorials for blogs. 
+- [Terminalizer](https://terminalizer.com){:target="_blank"} - Make gifs of your code in terminal for tutorials for blogs. 
 
-- [NANO ID](https://zelark.github.io/nano-id-cc/) - Random number generator 
+- [NANO ID](https://zelark.github.io/nano-id-cc/){:target="_blank"} - Random number generator 
 
-- [Web pack Monitor](http://webpackmonitor.com) - The Ultimate Optimization Tool For Modern Web Development
+- [Web pack Monitor](http://webpackmonitor.com){:target="_blank"} - The Ultimate Optimization Tool For Modern Web Development
 
-- [Map talk](https://maptalks.org/index.html) - An open-source javascript library for integrated 2D/3D maps.
+- [Map talk](https://maptalks.org/index.html){:target="_blank"} - An open-source javascript library for integrated 2D/3D maps.
 
-- [Parcel](https://parceljs.org) - Blazing fast, zero configuration web application bundler
+- [Parcel](https://parceljs.org){:target="_blank"} - Blazing fast, zero configuration web application bundler
 
-- [Tone.js](https://tonejs.github.io) - Tone.js is a Web Audio framework for creating interactive music in the browser.
+- [Tone.js](https://tonejs.github.io){:target="_blank"} - Tone.js is a Web Audio framework for creating interactive music in the browser.
 
 
 ______________________________________
@@ -483,17 +483,17 @@ ______________________________________
 
 **Do not skip these even if it takes extra 20 days :)**
 
-- [Build a social media app (MERNG Stack)](https://www.youtube.com/watch?v=n1mdAPFq2Os)
+- [Build a social media app (MERNG Stack)](https://www.youtube.com/watch?v=n1mdAPFq2Os){:target="_blank"}
 
-- [Instagram Clone](https://www.youtube.com/watch?v=1hPgQWbWmEk&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=3)
+- [Instagram Clone](https://www.youtube.com/watch?v=1hPgQWbWmEk&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=3){:target="_blank"}
 
-- [Learn MERN Stack](https://www.youtube.com/watch?v=7CqJlxBYj-M&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=4)
+- [Learn MERN Stack](https://www.youtube.com/watch?v=7CqJlxBYj-M&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=4){:target="_blank"}
 
-- [Landing page using HTML CSS AND JS](https://www.youtube.com/watch?v=aoQ6S1a32j8&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=19)
+- [Landing page using HTML CSS AND JS](https://www.youtube.com/watch?v=aoQ6S1a32j8&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=19){:target="_blank"}
 
-- [Mern Stack Course - Convert backend to serverless](https://www.youtube.com/watch?v=mrHNSanmqQ4&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=28)
+- [Mern Stack Course - Convert backend to serverless](https://www.youtube.com/watch?v=mrHNSanmqQ4&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=28){:target="_blank"}
 
-- [Free Official MongoDB Courses](https://university.mongodb.com/courses/catalog)
+- [Free Official MongoDB Courses](https://university.mongodb.com/courses/catalog){:target="_blank"}
 
 
 <br>
