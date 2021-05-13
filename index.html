@@ -1,0 +1,759 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title> #100daysofWebDev (Full Stack)</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="88758d52-aebb-4166-aec6-4bc74eb13234" class="page sans"><header><img class="page-cover-image" src="COMMUNITY.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Copy_of_Copy_of_Copy_of_Copy_of_100_days-4.gif"/></div><h1 class="page-title"> #<a href="https://100days.codes/">100days</a>ofWebDev (Full Stack)</h1></header><div class="page-body"><p id="00dd41ec-2441-454b-aef5-9b13ed52526f" class="">
+</p><h1 id="88bdda07-4790-4bb2-b27a-dc62c996e6b0" class="block-color-purple_background">⚠️ Before starting</h1><p id="9a08695a-6970-4e19-8613-8e8e37eda20c" class="">
+</p><ol id="c3db0b50-9cfb-4147-8774-06b95dce3928" class="numbered-list" start="1"><li><strong>⭐️ Star this repo. </strong><mark class="highlight-yellow"><a href="https://github.com/utkarshxy/100-days-of-Data-Science"><strong>[Link]</strong></a></mark><mark class="highlight-yellow"><strong> </strong></mark><strong> Cause why not 😅 😊</strong></li></ol><ol id="aff50b47-da39-4fbe-beb8-ad139ea561d9" class="numbered-list" start="2"><li>Update/add your title as “<mark class="highlight-yellow">Participant</mark>” in 100days under the professional experience section on LikedIn. ( Description will be <mark class="highlight-pink">Full Stack Web Development</mark> for this pathway)<figure id="ebb68c6f-4355-41f2-98bb-13de5bdb425a" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/Screenshot_2021-05-13_at_1.24.03_PM.png"><img style="width:576px" src="#Screenshot_2021-05-13_at_1.24.03_PM.png"/></a></figure><p id="44322f26-cb92-4bc3-ae28-a9443fb9544c" class="">
+</p></li></ol><ol id="dd13b16f-d8a9-42f8-b814-36bb0c2b6b77" class="numbered-list" start="3"><li>Make sure you have followed all steps mentioned in &quot;<mark class="highlight-purple">How to get Started&quot;</mark> page. <figure id="f35a23ab-c564-442d-b112-8dcc8b3766d5" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/Screenshot_2021-05-12_at_7.06.13_PM.png"><img style="width:576px" src="Screenshot_2021-05-12_at_7.06.13_PM.png"/></a></figure><p id="20ec3f0b-9e45-4c94-a91a-e7aceef96e70" class="">
+</p></li></ol><ol id="25519595-0cf8-4cee-94fc-33b5a5dfefa8" class="numbered-list" start="4"><li><mark class="highlight-purple">Lastly, Before starting Day 1</mark><mark class="highlight-yellow"> - </mark><span style="border-bottom:0.05em solid"><strong>Do not forget to commit to the challenge publicly. </strong></span>
+</li></ol><ol id="bd06ebc3-a6b9-423b-9a6b-4e714cefb81a" class="numbered-list" start="5"><li><strong>Everything mentioned in this pathway with colour &quot;</strong><strong><mark class="highlight-yellow">Yellow</mark></strong><strong>&quot; is a link. 
+ Don&#x27;t forget to click it! </strong></li></ol><p id="2119b5bd-0b68-4e89-8242-b6dad5f1c811" class="">
+
+</p><h1 id="1038d354-a820-401c-8859-dec070ab4f75" class="">🏁 <mark class="highlight-orange">Golden RULE</mark></h1><p id="0edcdcd5-23fe-409a-b7aa-1ab4280ca707" class="">(More like orange rule but I failed to find the golden colour 😂)
+</p><p id="42b3927d-fbf0-4974-b1e8-f338ce9f3cfe" class="">Each day you will be sharing your progress as (example) - </p><p id="dd127bbe-5084-4e56-8f7b-b4a08d0f2ae7" class="">
+Day 1/100 - Installing The tools and sharing what you learned and your experience on LinkedIn,  tagging <a href="https://www.linkedin.com/company/100daysofficial">our page</a>.
+
+<strong>Do not</strong> forget to use #hashtags : </p><ul id="9a33fce9-c2fe-41e2-88a0-ade62c3d5b20" class="bulleted-list"><li>#100days</li></ul><ul id="6ed20e8d-6802-4876-9bff-4d5b4ac6f5f0" class="bulleted-list"><li> #100daysOfficial</li></ul><ul id="aa92699a-5559-4876-ba06-e4012f0c2633" class="bulleted-list"><li>#100daysoflearning</li></ul><ul id="447ea391-8ba6-4a2e-bbb8-6ae3ae6a3747" class="bulleted-list"><li>#100daysofWebDev</li></ul><p id="94fefd3b-23d4-43bc-964f-ab537da55bf7" class="">
+</p><figure id="4e4f7eab-c276-4420-af6c-c17d275b249c" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/example.png"><img style="width:480px" src="example.png"/></a></figure><p id="1c53354f-1118-48d7-8da6-1826d8f0dc34" class="">
+(This example is for DataScience, But you get the point, You can make the changes to content and the hashtag changes to #100daysofWebDev .
+</p><blockquote id="3b5c8700-a22e-4d03-a73e-df7044069e02" class="">This is essential for you as you get to keep a track of your progress and us to stick to our motto for democratizing free learning and increasing our reach so more students get to use these curated pathways to kickstart their journey in various fields.</blockquote><p id="eb9bb03c-fbda-42c2-b06f-cb42b51f27d8" class=""><strong>Don’t Forget to read a little message at the end for everyone by the Founder of 100days.</strong></p><hr id="e433ccf7-4eaf-41fd-a28a-8382cd10d5d7"/><hr id="533d175d-9def-4060-a291-29950f63ee18"/><p id="4ce368d7-51ba-4ec3-b464-df13c257d71b" class="">
+</p><p id="88e8661c-cf73-4f5b-b094-1d87f7be28bd" class="">
+</p><p id="ac11ab55-881f-4cdf-b3de-79630949b233" class="">
+</p><h1 id="96e0faf9-5e24-49b5-8ea1-6fa0f07f22cd" class="">⚠️ Prerequisite - Version Control Systems and Git
+</h1><p id="72d98226-a790-43af-9048-1a417d176847" class=""><strong>Before we start Day 1, This pathway assumes that you are aware of git i.e version control systems. So if you arent familiar with Git and how it works, let’s get you started right away.
+</strong></p><ul id="9a7e4a92-6f96-43bf-ad2b-9412305e9da4" class="block-color-yellow bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=zbKdDsNNOhg">Version Control System Introduction</a></mark></li></ul><ul id="20f21eaf-ab43-44d0-9e75-6a4efbfd35fd" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc">Git and Github Crash Course</a></li></ul><ul id="621480e6-9360-47cd-9457-b501887cecad" class="block-color-yellow bulleted-list"><li><a href="https://youtu.be/Y9XZQO1n_7c?t=21">Learn Git in 20 minutes</a>
+
+
+
+</li></ul><h1 id="fca2a2cd-1086-4cdf-a615-b7ca8f44c6cc" class="">✅  Day 1 - Understanding Basics and Installing the Tools
+</h1><p id="b0eeb1ab-e8e2-4926-9157-08d59ef2e2fb" class="">First of all welcome everyone who has taken this pathway! Before getting started the traditional way, Let us first understand the terms used in Full Stack and understand a few basics before getting started. The first day itself might seem long but bear with us a little. It’s not that hard.
+</p><ol id="124a1f72-c4ae-4225-9d07-629ceff69a7e" class="numbered-list" start="1"><li><mark class="highlight-purple">What is web development: How websites work, front-end vs back-end ?</mark><ul id="a5320e1f-3e54-45ea-bf15-ce614352e307" class="bulleted-list"><li><mark class="highlight-blue">How do websites work?</mark>
+All websites, at their most basic, are just a bunch of files that are stored on a computer called a server. This server is connected to the internet. You can then load that website through a browser (like Chrome, Firefox, or Safari) on your computer or your phone. Your browser is also called the client in this situation.Anything that you can access in your browser is something that a web developer built. Some examples are small business websites and blogs on the simpler side, all the way up to very complex web apps like AirBnb, Facebook and Twitter.</li></ul><ul id="8fdd960f-3d2d-487b-b988-51ce7151c85d" class="bulleted-list"><li><mark class="highlight-blue">What’s the difference between front-end and back-end? </mark>
+Front end” means that you’re dealing mainly with the client side. It’s called the “front end” because it’s what you can see in the browser. Conversely, the “back end” is the part of the website that you can’t really see, but it handles a lot of the logic and functionality that is necessary for everything to work.</li></ul></li></ol><ol id="f342223d-c417-418e-9c62-a2712c16c62c" class="numbered-list" start="2"><li><mark class="highlight-purple">Basic front-end</mark><ul id="d85261d7-3663-48e5-b025-cfc5738e2de0" class="bulleted-list"><li><mark class="highlight-blue">HTMLHTML, or HyperText Markup Language</mark>, is the foundation of all websites. It’s the main file type that is loaded in your browser when you look at a website. The HTML file contains all the content on the page, and it uses tags to denote different types of content.</li></ul><ul id="9bb88f85-f3c6-47e2-8116-6375a3f15f88" class="bulleted-list"><li><mark class="highlight-blue">CSS CSS, or Cascading Style Sheets</mark>, lets you style that HTML content so it looks nice and fancy. You can add colors, custom fonts, and layout the elements of your website however you want them to look. You can even create animations and shapes with CSS!</li></ul><ul id="b6e92675-b9c9-4a16-ab7b-3afdb7ae3312" class="bulleted-list"><li><mark class="highlight-blue">JavaScript JavaScript</mark> is a programming language that was designed to run in the browser. Using JavaScript, you can make your website dynamic, meaning it will respond to different inputs from the user, or other sources.</li></ul></li></ol><ol id="0ab7b3a3-a650-4636-b661-0831a17514bb" class="numbered-list" start="3"><li><mark class="highlight-purple">Basic back-end</mark></li></ol><ul id="394d5730-2194-4b78-bbae-da921a30b802" class="bulleted-list"><li>The core concern of back-end developers is creating applications that can find and deliver data to the front end.</li></ul><ul id="c4dc1e01-ab55-4a99-8ae1-33cf4a7fd83c" class="bulleted-list"><li>Many of them use reliable enterprise-level databases like Oracle, Teradata, Microsoft SQL Server, IBM DB2, EnterpriseDB and SAP Sybase ASE. There’s also several popular databases including MySQL, NoSQL and PostgreSQL.</li></ul><p id="2ad35513-86a1-4a25-8e11-f0db49d3dae3" class=""><strong>Read</strong> Now that we understand the term “Full Stack better”, here’s a link to one of the best resources out there to understand every term that will be used in Web Development. <mark class="highlight-yellow"><a href="https://www.w3schools.com/whatis/whatis_http.asp">Link</a></mark></p><p id="95d28c72-e507-4b74-aa54-ea35bb7e0f42" class=""><mark class="highlight-yellow">
+</mark></p><figure id="98ad85af-7e98-411b-bcbf-4fefd5860568" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/Day1w3.png"><img style="width:432px" src="Day1w3.png"/></a></figure><p id="14a67ad1-ca58-48d3-b2f9-ffe3e1fe9f0c" class="">
+<strong>Click next until you reach SQL</strong></p><p id="c1ede55c-d298-4082-959c-ee5dbe0b97e8" class="">
+</p><figure id="a935e2b9-855b-4085-97de-7c23278ae896" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/Day1-2.png"><img style="width:480px" src="Day1-2.png"/></a></figure><p id="56c5bf61-6dd3-4849-a919-c0c43acfc728" class="">
+</p><p id="73056d77-9bf9-418d-8c9d-bfdd55a5d4e8" class="">Once done with giving all of that ☝🏼 a read. Let’s talk about the IDE we will use..</p><ul id="cb63f317-de17-41b8-849c-5144074d76aa" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://code.visualstudio.com/download">Vs Code</a></mark></li></ul><p id="521d279a-5b30-43ee-adee-5fe75148280e" class="">
+</p><p id="5044158f-c984-4408-925c-f9bf9aac409d" class="">Single-handedly the best code editor, does not need extra setup for handling the front end at all. You are free to use Sublime Text OR any other code editor for that matter too. Given that we will be focusing on the languages, IDE’s won’t matter.</p><p id="a292cdce-1e79-43cc-8420-b57a9a4ba80a" class="">
+
+
+</p><h1 id="bd5e18bb-0636-4c3f-a424-2c541971982e" class="">✅  Day 2 to 20 - HTML AND CSS</h1><p id="d121a1bb-23ab-4162-b3a7-064dddb99576" class="">
+</p><p id="03e2fa20-6dc9-4081-875c-c05efe7d123e" class="">I feel one of the best ways to learn coding languages is to rather do the implementation side by side with learning rather than just reading it like high school biology. Let’s get started without wasting any time.</p><ul id="043f467b-a58b-49d8-96e0-3e569138c1e2" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=pQN-pnXPaVg&amp;list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&amp;index=3">HTML Full Course - Building a website</a></mark> - 2 Hours 
+This course is great for starting, its easy its simple. Also, don’t rush to understand things in one go. The next video is of 11 Hours that will definitely cover everything. I would request you’ll to just treat this as a video lesson and remember the things you do not understand. The next video definitely will help you to clear your doubts.</li></ul><ul id="3020279f-a453-488e-afd6-efb9e8480f85" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=mU6anWqZJcc&amp;list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&amp;index=1">Learn HTML5 AND CSS</a></mark> - 11 Hours 
+Amazing amazing….. Literally, Freecodecamp is better than anything else out there in a few courses, WebDev is definitely one of them. This course starts from the very basics to installing vscode, using and leveraging inspect element tool. 11 Hours for this is worth it.</li></ul><ul id="72da5a4f-601f-4d33-92ee-23339ace05d8" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=srvUrASNj0s">Introduction To Responsive Web Design - Bootstrap</a></mark><mark class="highlight-yellow"> - </mark>4 Hours 
+Responsive design with HTML AND CSS.</li></ul><ul id="88116c0d-da6c-43a3-ae0a-d5566c251fcf" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=srvUrASNj0s">Sass (CSS) with Portfolio building project</a></mark> - 2 Hours<ul id="98a51c5d-0483-453c-b517-b3dc8dca699e" class="bulleted-list"><li>What is Sass? Sass is a CSS pre-processor. Sass reduces the repetition of CSS and therefore saves time. Read this before the video to get a better understanding of Saas.
+
+</li></ul><figure id="6e7d8781-5828-4213-a5ba-b9b222265bfd" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/Saas.png"><img style="width:576px" src="Saas.png"/></a></figure><p id="ebd3cb2a-4f5a-4d5a-809e-3e4ba9068fd7" class="">
+</p></li></ul><p id="e60949b6-b075-42d9-b63f-d6473d64e337" class=""><mark class="highlight-yellow"><a href="https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/">Practice Projects</a></mark> - 2 Hours each day 
+The link has 10 projects for beginners and it will help your practice your HTML and CSS. Folks, do not let this one slide. It’s important that you do this by yourself, try your best to not look at the code.</p><p id="a0d0ae4f-b435-4c4e-bc4f-156f4fb9fe00" class="">
+</p><p id="f3407b11-f2de-45d6-8128-054cd1c92e5a" class="">
+</p><h2 id="81a673e8-f265-44bc-894a-cc0495cf9718" class="">🗓 Schedule</h2><p id="55bbd756-40e2-43d0-89a5-33294c4402ec" class="">So we have a lot to work with… yeah? Here…we are planning to utilize 2 hours from your precious 24 for HTML, CSS. The schedule is really light, Take it slow but try to dedicate at least 2 hours every day. (You will still be able to complete it even if you do not.)</p><div id="e23e725a-d0ac-4d13-9043-758f95ff3a4b" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="0a1d692c-9ac7-421e-916d-a3b1b810bc11"><td class="cell-title"><a href="https://www.notion.so/2-0a1d692c9ac7421e916da3b1b810bc11">2</a></td><td class="cell-U]J^">HTML Full Course</td></tr><tr id="b3250af9-b6bf-4961-af49-b1897c4fc3c3"><td class="cell-title"><a href="https://www.notion.so/3-to-9-b3250af9b6bf4961af49b1897c4fc3c3">3 to 9</a></td><td class="cell-U]J^">Learn HTML5 AND CSS</td></tr><tr id="6293006c-9aa4-4d87-ae7a-f6e28d01987d"><td class="cell-title"><a href="https://www.notion.so/12-6293006c9aa44d87ae7af6e28d01987d">12</a></td><td class="cell-U]J^">Sass (CSS) with Portfolio building project]</td></tr><tr id="469cc860-eba3-4508-9732-8e3b75e07e66"><td class="cell-title"><a href="https://www.notion.so/13-20-469cc860eba3450897328e3b75e07e66">13 - 20</a></td><td class="cell-U]J^">7 Projects at least ( One every day )</td></tr></tbody></table></div><p id="c4d010b6-c0b3-41c7-b982-6bc9a29f4a36" class="">
+</p><p id="4e616ba4-d5ed-496e-a1db-82b0b2fc7c0b" class="">
+</p><h1 id="968fd288-be7b-49a6-b5c4-818c7798ea2d" class="">✅  Day 21 - 30 Java Script/ Vanilla JavaScript</h1><p id="5013165e-bc13-4977-ae08-075a86b4d490" class="">
+</p><p id="23a9abb5-9893-4cfb-b208-7dd18559e4d2" class="">The term “Vanilla” is used to refer to pure Javascript or in simpler words plain javascript with any additional libraries.  If you know any other language such as C, C++, Java or Python then JavaScript should be no brainer for you guys. It’s easy and clean to understand. Let’s start.</p><ul id="46c31ad0-ab3a-48ff-ade0-37d002d73f3d" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg">Javascript from 0</a></mark><mark class="highlight-yellow"> </mark>- 3.5 Hours 
+This course is an absolute beast to get started with, made for beginners to start right from scratch.</li></ul><p id="b5a7c840-8cd7-4aa3-bf91-4e368e0ab3eb" class="">JavaScript has no limits… not literally 😅, everything has a limit, But javascript is something that needs to be experimented with, you can make games, projects best designs.</p><ul id="e838e2f8-dfe4-40c4-8abd-700d13dffb5c" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=3PHXvlpOkf4">15 Javascript Projects</a></mark><mark class="highlight-yellow"> </mark>- 8.5 Hour
+This 8.5 hour video is lengthy but its great to get hands-on javascript with various projects covering all major topics.</li></ul><p id="0ed29fd7-2994-4133-9538-e2a522ed5521" class="">
+</p><p id="b04f7cd5-074c-430a-b145-a6b0041c5dc6" class="">
+</p><h2 id="b98c7eb2-5040-4c35-bf6a-2dd629433db8" class="">🗓 Schedule</h2><p id="1da1b8de-59e0-48c9-834c-ca9f22509299" class="">Folks the projects are important, make sure you do not miss out on/skip them. The schedule is stretched a little to make it easy and to implement everything along with the videos. Make sure you implement everything.</p><div id="fb6a55ac-14c8-4d2d-ba24-59ae9b18bd53" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="4e831ca0-e6d3-4e30-8ab5-5036ddb84d51"><td class="cell-title"><a href="https://www.notion.so/21-23-4e831ca0e6d34e308ab55036ddb84d51">21-23</a></td><td class="cell-[diA">Javascript from 0.</td></tr><tr id="23858680-9411-44e7-b7bc-4ccf03458a78"><td class="cell-title"><a href="https://www.notion.so/24-30-23858680941144e7b7bc4ccf03458a78">24-30</a></td><td class="cell-[diA">15 Javascript Projects</td></tr></tbody></table></div><p id="4b63d436-1de4-48e0-bed4-7e6eaa7c4436" class="">
+</p><p id="80f5a79f-5741-4b03-85f5-d95a55155f09" class="">
+</p><h1 id="06157112-5f4b-4cb1-a226-1fa25fb86ab4" class="">🥳 Day 31 - Take a Day off 😄 🙌🏼</h1><p id="a764b8df-dc54-49e0-a030-aff6ea41c587" class="">
+</p><p id="8cd569b5-b045-43d4-a764-6325b4e8bda2" class="">
+</p><p id="a9a5cc17-c07d-46d7-ab23-6c38923a6463" class="">
+</p><p id="5978a73d-4897-4774-bfd9-5728d85f00e3" class="">
+</p><p id="5a4165f0-3ed8-4f08-924b-3c0649410383" class="">
+</p><h1 id="f63398e4-1e85-4ef6-84f5-fd39b7a950f3" class="">✅  Day 32 TO 36 JS AJAX, JSON, WeB APIS</h1><p id="55e47e2c-6651-40e9-bc7f-24ec38b64c8e" class="">
+</p><p id="1ceeaee0-0559-481c-b02b-e94a3bad5fb7" class="">Now let’s start with understanding AJAX followed by understanding Json files and APIS. We will use W3schools and a video here to clear our concepts.</p><ul id="b787d124-0f84-4b95-836e-362f6aeb3c5c" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.w3schools.com/js/js_ajax_intro.asp">JS AJAX</a></mark></li></ul><ul id="e5b478bb-c5b5-4c48-83b0-533c194d87af" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.w3schools.com/js/js_json_intro.asp">JS JSON</a></mark></li></ul><ul id="a176c808-d3b5-415f-8496-8f388b0c98a6" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.w3schools.com/js/js_api_intro.asp">JS Web APIs</a></mark></li></ul><ul id="e795b9e8-84d8-4571-adf0-571d7a2761f9" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=rJesac0_Ftw">JSON AND AJAX Tutorial</a></mark> - 40 mins 
+The video is hardly 40 mins but make sure you use implement the examples side by side.</li></ul><ul id="32b30a17-839f-4fe3-b4c3-93deb4022775" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=GZvSYJDk-us">API’S for beginners</a></mark> - 2.5 Hours 
+Best one out there to understand the use of API’S.. If you want to know how is Js involved in all this.. wait till the end of the video.</li></ul><p id="f90ff84d-7b43-47c8-85ec-0fbbfc6711f5" class="">
+</p><p id="58f40134-da0d-4b45-9657-c3d74118b7ee" class="">
+</p><h2 id="6c1ce1b6-cccf-4879-9907-c4b7e8dc368c" class="">🗓 Schedule</h2><p id="caf5b063-4ded-434b-9ef8-a0fb88f2638d" class="">
+</p><p id="5e818547-a199-4173-95e9-2da132171de5" class="">It’s all reading, can’t force you to sit for 4 hours and finish it in a go right ?</p><div id="be098fa3-f59c-458f-a1d7-087cf7fd6bf5" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="6e0a9a63-8167-4eb3-89b8-e4a7ba2819bf"><td class="cell-title"><a href="https://www.notion.so/32-33-6e0a9a6381674eb389b8e4a7ba2819bf">32-33</a></td><td class="cell-\FoX">AJAX JSON WeB APIS - W3schools</td></tr><tr id="0d1f241e-fd78-4a9d-934e-695c92babd04"><td class="cell-title"><a href="https://www.notion.so/34-0d1f241efd784a9d934e695c92babd04">34</a></td><td class="cell-\FoX">JSON AND AJAX Tutorial</td></tr><tr id="229bc90b-083e-435a-8736-ff23887b7cf1"><td class="cell-title"><a href="https://www.notion.so/35-36-229bc90b083e435a8736ff23887b7cf1">35-36</a></td><td class="cell-\FoX">API’S</td></tr></tbody></table></div><p id="385cf514-9ce7-455c-80f9-379489b2d5fc" class="">
+</p><p id="6bac4ea8-db69-4c12-8112-af2db5ed5b2b" class="">
+</p><h1 id="f9743882-8a92-4065-93dc-b9b3d9be755e" class="">✅  Day 37 to 41 - jQuery</h1><p id="d9c43906-bb95-4bbe-ab97-bef8e743b3af" class="">
+</p><p id="0827efa2-e9d9-4756-8ac1-73df0d743479" class="">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. (Source: jQuery.com)</p><p id="c48c9194-7cbc-4b50-b534-0a587404798a" class="">Read this document to understand jQuery API. <mark class="highlight-yellow"><a href="https://api.jquery.com/">Link</a></mark>.</p><ul id="c77a6117-9939-47d3-b009-3409b7165c89" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.freecodecamp.org/learn/front-end-libraries/#jquery">jQuery</a></mark><mark class="highlight-yellow"> </mark>- 18 courses 
+Click on the link wait for a few seconds, it will directly take you to jQuery section 18 short courses are there, easily doable in 5 days.
+
+</li></ul><h2 id="c8c8dcbf-af9f-488d-9a65-8858917258cb" class="">🗓 Schedule</h2><p id="7dd7ed63-261c-4599-8f3b-642ccfafd340" class="">It’s all reading, can’t force you to sit for 4 hours and finish it in a go.</p><div id="3c928980-2b50-46c8-8651-44e6ae55d1f4" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="c18109f1-c347-46df-8a27-c5c533a7051f"><td class="cell-title"><a href="https://www.notion.so/37-41-c18109f1c34746df8a27c5c533a7051f">37-41</a></td><td class="cell-uYfP">jQuery course on Freecodecamp</td></tr></tbody></table></div><p id="3b8956e9-c95e-4337-b45e-c427268bb16c" class="">
+</p><p id="3b63cdea-2889-42df-b3b2-1b311a5507ea" class="">
+</p><h1 id="f2df185e-9ae6-4fe4-a310-def542aa2166" class="">✅  Day 42 to 55 - React JS</h1><p id="a79d691d-1255-41b5-8ec0-07fed961025b" class="">
+</p><p id="0f200ba3-c5ab-4882-bc7d-6b1788830523" class=""><strong>Read</strong><mark class="highlight-yellow"><strong> </strong></mark><mark class="highlight-yellow"><a href="https://www.framer.com/blog/posts/react-vs-vanilla-js/"><strong>this</strong></a></mark><strong> article to understand the difference between React and Vanilla/Plain Js.</strong></p><ul id="f87e2ac4-7b97-429e-be02-948b74f3ff80" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://reactjs.org/tutorial/tutorial.html">React Tutorial</a></mark> - 2 to 3 Hours</li></ul><ul id="8779e17c-10df-49c2-bfc0-9b4128f15b06" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=4UZrsTqkcW4">React Full Course</a></mark><mark class="highlight-yellow"> </mark>- 10 Hours</li></ul><p id="fa452032-3fc6-4811-bb90-f7f09c0f38ba" class="">
+</p><p id="40191785-a01b-4a24-9593-87a3203286e8" class="">
+</p><h2 id="8d7bf6b6-33f6-4f1b-8da0-1c1f1806ca56" class="">🗓 Schedule</h2><p id="0efd9a2f-3e7c-44a2-940b-0c3522069a17" class="">The schedule is kept super light you will hardly sit for 1 hour every day, but make sure you are implementing them too while watching the videos.</p><div id="85aa5310-70f5-47e8-a331-bb37fc5b89ed" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="9e87e5a8-6a9c-47f1-bcb8-7052d1ab4ba6"><td class="cell-title"><a href="https://www.notion.so/42-9e87e5a86a9c47f1bcb87052d1ab4ba6">42</a></td><td class="cell-]|s[">React Tutorial]</td></tr><tr id="9be91ec9-6825-443b-bcd6-de4a58db5a47"><td class="cell-title"><a href="https://www.notion.so/43-55-9be91ec96825443bbcd6de4a58db5a47">43-55</a></td><td class="cell-]|s[">React JS</td></tr></tbody></table></div><p id="17338176-a736-45ad-9720-9ff06938b282" class="">
+</p><p id="a2720be1-bfd6-49ce-945d-eb1efba19e2e" class="">
+</p><h1 id="68bf58c4-df1a-4108-a171-f9e021b4ff2a" class="">✅  Day 56 to 66 - Redux</h1><p id="7701635d-3f0b-4d66-92a5-5a73a11c6db4" class="">
+</p><p id="19b23d7b-e80d-4eed-b018-59c170f8decd" class="">One of the best ways to learn about something is to get the info from the official site itself. But to sum it all up - Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time-traveling debugger. (Source: redux.js.org)</p><ul id="84bca6ce-95bc-4dae-b8e5-5d8bf1a5b3f3" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://redux.js.org/tutorials/index">Tutorial - Reading</a></mark><mark class="highlight-yellow"> </mark>- 3 Hours 
+Follow the order shown in the picture. The tutorial follows top to down approach explaining Redux in the correct order.
+
+</li></ul><figure id="96e79559-bd2f-4a91-a056-ffd6b4e9ce4f" class="image"><a href="#100daysofWebDev%20(Full%20Stack)%20ebb68c6f435541f298bb13de5bdb425a/redux.png"><img style="width:2834px" src="redux.png"/></a></figure><p id="9ba4d115-73fb-40f8-8e47-1fbd8f6bd9f0" class="">
+</p><p id="8c9ff142-22e0-4bf8-a68d-df68bb298d30" class="">
+</p><ul id="eea3aa9d-3e6e-49bf-893c-0ec44852da7f" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867">Redux Fundamentals</a></mark><mark class="highlight-yellow"> </mark>- 2 Hours 
+This course from the creator of Redux is free and should get you started with understanding redux better.</li></ul><ul id="0e1a7b5a-c1f5-4843-8697-ccf37fc7bd73" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=93p3LxR9xfM">Redux Crash Course</a></mark><mark class="highlight-yellow"> </mark>- 1 Hour</li></ul><ul id="9b215eb0-173c-4d17-9604-f89ecdec4470" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.freecodecamp.org/learn/front-end-libraries/#react-and-redux">Redux Exercise on FreeCodecamp</a></mark> - Self paced</li></ul><p id="e6120fc4-3e9f-4475-b4eb-a49bfa8be861" class="">
+</p><p id="043ada6f-d4e2-4ac7-a90b-ee83d3e280b6" class="">
+</p><h2 id="20c1697d-b480-41c7-8877-86d6b697acb2" class="">🗓 Schedule</h2><div id="d1651e5c-0971-46a4-a50d-cce9380cf586" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="0314e2c9-99aa-47d5-a08b-3c15545aa473"><td class="cell-title"><a href="https://www.notion.so/56-57-0314e2c999aa47d5a08b3c15545aa473">56-57</a></td><td class="cell-MYQl">Redux Tutorial</td></tr><tr id="76046acb-631a-433a-ba8f-53801040f85d"><td class="cell-title"><a href="https://www.notion.so/58-59-76046acb631a433aba8f53801040f85d">58-59</a></td><td class="cell-MYQl">Redux Fundamentals</td></tr><tr id="cfe7764a-6d2d-49f4-822d-3ae713c2ba15"><td class="cell-title"><a href="https://www.notion.so/60-66-cfe7764a6d2d49f4822d3ae713c2ba15">60-66</a></td><td class="cell-MYQl">Freecodecamp’s Exercise</td></tr></tbody></table></div><p id="c1578e7a-4ce7-402f-bfab-a9df51cad0ef" class="">
+</p><p id="e79370b7-f8c6-43c3-80bc-6f23b0231938" class="">
+</p><h1 id="09bec536-fb23-4ba3-ad84-ba7cde066b5d" class="">✅  Day 66 to 70 - Node.js, NPM, Rest API’s, MongoDb, Docker, Angular</h1><p id="f914c498-3b57-45ee-9f1c-601550397acd" class="">
+</p><p id="2482ab27-36b0-49b9-98d5-616145a81210" class="">Node.js before was used as a back-end, but looking at the trend it shifted to the front end because of its functionalities and one the best one being Node Package Manager (NPM) which is used to manage dependencies of projects.</p><ul id="d47a2840-107d-4282-9407-e01611fe0fa9" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://nodejs.org/en/docs/guides/">Node Official Guide</a></mark></li></ul><p id="56b3b15f-27d8-4bad-9efb-3a4a1503480d" class="">Now the title was quite big. What if I told you there is a video out there that covers all those topics in a single video?</p><ul id="eac4a66f-caef-476b-8bd5-3123024e3842" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=RLtyhwFtXQA&amp;list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&amp;index=11">Node JS Complete</a></mark><mark class="highlight-yellow"> </mark>- 3 Hours br&gt;</li></ul><ul id="df1fa66d-9358-4591-8de9-435ac74de674" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=JnvKXcSI7yk">Node.js Full Course</a></mark><mark class="highlight-yellow"> </mark>- 7 Hours  Covers NPM, Rest API’s, MongoDB, Docker, Angular. (MEAN Stack)</li></ul><p id="b16261c7-0492-4370-8925-bdf32ca5f28f" class="">
+</p><p id="fc8885d2-b98b-4588-9e4c-6e4678f5aff4" class="">
+</p><h2 id="b75b55a0-d2ae-4ad6-af72-964b3f841743" class="">🗓 Schedule</h2><div id="b7b564c5-b102-4192-9090-8d870e6729cc" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="0d3da67f-c6c8-4e2f-9729-8796dd600305"><td class="cell-title"><a href="https://www.notion.so/66-0d3da67fc6c84e2f97298796dd600305">66</a></td><td class="cell-UqsO">Node JS Complete</td></tr><tr id="ab50563b-ca3b-46ab-9f40-25bc607e18b0"><td class="cell-title"><a href="https://www.notion.so/66-67-ab50563bca3b46ab9f4025bc607e18b0">66-67</a></td><td class="cell-UqsO">Node.js Full Course</td></tr></tbody></table></div><p id="db4a2d68-2f33-4740-b577-1b5088bb4c6e" class="">
+</p><p id="b161d8da-bfcc-4491-ab50-85187c9606cd" class="">
+</p><h1 id="8291d108-9fd3-47a3-9247-7d6d9a67cb2d" class=""><mark class="highlight-pink_background">⏪ BACK END</mark></h1><p id="028c8344-3c01-45c5-842d-b23951c00e68" class="">
+</p><p id="d9028b78-a0bb-4b46-a975-0a58fedca052" class="">Now that we have completed our front end path, let’s come to back end. What exactly is needed (bare minimum) for backend?</p><ol id="d5346afc-3ac9-42dc-9d65-f20ed22c4c7a" class="numbered-list" start="1"><li>Good knowledge about a programming language in which you can write HTTP servers. Examples: C#, Java, Node, PHP, Python, etc. (there are many!)</li></ol><ol id="c171b4f3-c03a-40ac-9396-a4e3a3332223" class="numbered-list" start="2"><li>Manage to host using cPanel (traditional) or using bash terminal (cloud hosting/traditional)</li></ol><ol id="cf1ffc8d-d084-45d3-b23a-27a468a71097" class="numbered-list" start="3"><li>Working with Version Control Systems (VCS) like git for managing and deploying builds</li></ol><p id="0b87c66b-ff24-40af-946b-6e8d7f02d668" class="">One of the best parts that you do not realize is that we have already covered JavaScript which the ranked #1 as a backend programming language. If you want to still learn another language you are most welcome to.
+
+</p><p id="f99aa8ad-94f0-45ba-9a32-f261a541fe72" class="">
+</p><p id="f458e7fa-e2a4-4b6f-978b-142150ebeb1d" class="">
+</p><h1 id="a9f618cd-f148-4317-a2cb-2f3769430bc5" class="">✅  Day 70 to 74 - SQL</h1><p id="d96b2bcd-37d9-4cb5-82de-bf53276edf80" class="">
+</p><p id="14caa436-46a0-430a-919b-e2c9d799bbde" class="">SQL is a goto and a must when it comes to database management systems. You can also use NoSQL too.</p><ul id="4afd2867-d276-40e1-96ea-b1bc85388840" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=HXV3zeQKqGY&amp;t=1s">SQL Complete Course</a></mark></li></ul><p id="73846cba-c67c-4ab1-8194-7d81144ce377" class="">
+</p><p id="afe66cc7-6e61-4482-8551-b76c581018af" class="">
+</p><h3 id="009f41d6-1cab-4797-8cf1-71ae89fa1162" class="">🗓 Schedule</h3><div id="caca937c-ff2f-4fa4-bbe9-e7325d659750" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="f178a313-e0a1-40e5-94f5-d9592007ae73"><td class="cell-title"><a href="https://www.notion.so/70-74-f178a313e0a140e594f5d9592007ae73">70-74</a></td><td class="cell-TNsb">SQL</td></tr></tbody></table></div><p id="e82e6248-5a4e-4054-b46e-21ef2a5af3fd" class="">
+</p><p id="c9eedc78-f077-4be9-bbb7-b2dd227a5baf" class="">
+</p><p id="12951372-6988-42d4-8b05-171543605860" class="">
+</p><h1 id="e7f6f4c1-d10f-41ca-a2f6-dcb40891daee" class="">✅  Day 75 to 78 - NGINX</h1><p id="7777af19-9892-45df-97a4-97f2de7b4093" class="">
+</p><p id="18829647-335e-4451-87fb-333bb10c3237" class="">What is N-GIN-X ? Click <mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=JKxlsvZXG7c">here</a></mark> to understand it in 100 seconds.</p><p id="d7f10a24-bcf0-49b4-bd4e-bfae3841ca9c" class="">This is a skill that is a must have if you really want to ace back end. It is so much in demand in the web industry that their own official page charges for its courses.</p><ul id="d89cd5b2-2ec0-4018-97fc-adb3464cd774" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://kinsta.com/knowledgebase/what-is-nginx/">NGINX - Article</a></mark> - 10 Minutes</li></ul><ul id="732c4405-39e8-47b6-9ee5-cc9b942a1c9d" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=GGS6KMRbONo&amp;t=9280s">NGINX Tutorial</a></mark><mark class="highlight-yellow"> </mark>- 3 Hours  <strong>OR</strong> / <strong>both</strong> Either use one or both.</li></ul><ul id="413667d2-d0ac-459b-bce4-19da6964ec38" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=hcw-NjOh8r0&amp;t=15s">NginX Crash Course</a></mark><mark class="highlight-yellow"> </mark>- 2 Hours</li></ul><p id="db9789f4-4ca4-4638-8e0b-9c23b26a26e6" class="">
+</p><p id="4f3af748-9bd1-4c90-a24f-405ec0f91d8b" class="">
+</p><h3 id="63a50dc5-5f80-416f-8bc3-362a65fbe4b5" class="">🗓 Schedule</h3><div id="3a23f207-319c-4c82-a00b-e39f36870d49" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="d32d361f-64e5-4843-8a3e-6d9d218bbf43"><td class="cell-title"><a href="https://www.notion.so/75-76-d32d361f64e548438a3e6d9d218bbf43">75-76</a></td><td class="cell-m;pO">NGINX Tutorial</td></tr><tr id="c0b6a72c-dac6-4900-9765-eb5e03be7363"><td class="cell-title"><a href="https://www.notion.so/77-78-c0b6a72cdac649009765eb5e03be7363">77-78</a></td><td class="cell-m;pO">NGINX Crash Course</td></tr></tbody></table></div><p id="1aabe422-9637-4492-ae4e-e8ab54b263b0" class="">
+</p><p id="37b23520-6cb7-4316-8b21-476dc8f08fc1" class="">
+</p><h1 id="d3531375-4d11-46cd-900f-6ecd9f215078" class="">✅  Day 79 to 85 - Deployment</h1><p id="09295f6c-d103-448c-b05b-ec76dea10207" class="">
+</p><p id="f20568b3-bee7-4647-bad3-14bf860e8745" class="">Deployment and the services offered by the companies, THERE’S SO MANY! I have compiled a list of tbe best resources to make you understand how all of it works overall. Also if you have already hosted your own website online using any of the services like netlify or digital ocean or azure or aws, you already know most of it!</p><p id="4ca22283-077f-45e5-aa0f-c01fefa5d00d" class="">
+</p><ul id="962200dc-3a91-454e-89f0-03758e819b67" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=JsOoUrII3EY&amp;t=0s">Deploying a Web App with Docker &amp; Github Actions</a></mark><mark class="highlight-yellow"> </mark>- Part 1 - 25 Mins</li></ul><ul id="8e2d2649-7e9b-470c-b509-fddb79398969" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=hf8wUUrGCgU">Deploying a Web App to Digital Ocean with Docker &amp; Nginx</a></mark><mark class="highlight-yellow"> </mark>- Part 2 - 43 Mins</li></ul><ul id="283d5098-9a75-4364-9462-613fcf1d1194" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=JgwI22y_eFA">Project - Building an Online Store</a></mark> - 1 Hour In this video focus on connecting cloud resources using React app.</li></ul><ul id="67789be9-9e46-432c-89fe-ceec97ef1d79" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=bjVUqvcCnxM">Deploying on Netlify</a></mark> - 22 Mins 
+Ever heard of Netlify? It’s one of the best one’s out there and I hosted 100days.codes using on Netlify . It lets you deploy your builds directly from GitHub. It’s crazy I know!</li></ul><ul id="312b9e83-09ee-4fc8-b0b1-3a13df864853" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=r2S89Hm1Uq0">Deploying Node.JS webstie on Heroku</a></mark><mark class="highlight-yellow"> </mark>- 8 Mins</li></ul><ul id="d5509bc7-5e47-4f86-9859-2fb6031b4459" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://www.youtube.com/watch?v=Bm5wJTQFzsE">E Commerce application deployment on Azure</a></mark><mark class="highlight-yellow"> </mark>- 2 Hours</li></ul><p id="9db5b402-ec88-4339-9106-7d4eb0d7f491" class=""><strong>This is the only place in the whole course I will ask you to research a little on your own or if you are confident then take a few days off because the last 15 Days are all about full scale projects.</strong></p><p id="4e5c9a80-8262-4b22-808f-545cdae53552" class="">
+</p><p id="aab474b3-5cd3-4b62-9b2e-3b48fbb2e93b" class="">
+</p><h2 id="5e833964-abad-4f4f-9f41-af5730fe3277" class="">🗓 Schedule</h2><div id="b4a465c7-71ff-4b1f-a604-6e177e1c7f4c" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="c520b7a8-59aa-4b27-8647-54fa8a6d87bb"><td class="cell-title"><a href="https://www.notion.so/79-80-c520b7a859aa4b27864754fa8a6d87bb">79-80</a></td><td class="cell-rLm]">Deploying with Docker Part 1 &amp; 2</td></tr><tr id="4d374a71-5dbd-46e1-9887-e72ef40a7fe5"><td class="cell-title"><a href="https://www.notion.so/81-4d374a715dbd46e19887e72ef40a7fe5">81</a></td><td class="cell-rLm]">Project - Building an Online Store</td></tr><tr id="81cc6852-d7ce-44a5-817f-f03c1e044518"><td class="cell-title"><a href="https://www.notion.so/82-81cc6852d7ce44a5817ff03c1e044518">82</a></td><td class="cell-rLm]">Deploying on Netlify</td></tr><tr id="4d2b988e-d4ce-43f6-9ef2-98c6af4956d8"><td class="cell-title"><a href="https://www.notion.so/83-4d2b988ed4ce43f69ef298c6af4956d8">83</a></td><td class="cell-rLm]">Deploying Node.JS website on Heroku</td></tr><tr id="8111628c-c002-4a7e-aee1-dde70d40fcda"><td class="cell-title"><a href="https://www.notion.so/84-8111628cc0024a7eaee1dde70d40fcda">84</a></td><td class="cell-rLm]">E Commerce application - Azure</td></tr></tbody></table></div><p id="185cec83-dc42-46e3-9a42-b2c95667e1af" class="">
+</p><p id="9a3e8deb-19a1-483d-8243-07ad7de2b01d" class="">
+</p><h1 id="899edf91-81e7-42a9-90e6-e4f8344a2076" class="">🥳  Day 85 - Take a Day off 😄 🙌🏼</h1><p id="a0f807ea-0175-4bb0-9998-9384c5fc0b4f" class="">
+</p><p id="95e8f3d5-0b06-4966-bb89-40640914da99" class="">
+</p><p id="958c9f00-e629-4229-a760-a1d17130f468" class="">
+</p><h1 id="27e4c873-3cd2-4f74-8853-f935d464b7e5" class="">💯🔥  Day 86 to 100 - Projects</h1><p id="01afe15d-dbbe-4793-9d3a-5ad74b453e22" class="">
+</p><p id="4a95124f-f42b-43f9-b316-e104521dfcfd" class=""><strong>Remember</strong> you may find of literally every project online, but that does not mean that you need to copy and paste everything..always remember as to why you took the 100days #challenge in the first place. 🔥</p><p id="8af71b2f-8fd8-4ec4-92f1-3536f43179a6" class="">
+</p><h3 id="7bce5d25-03dc-4418-a77d-98da1481185c" class=""><mark class="highlight-orange_background">Codepen projects with JS HTML CSS (</mark><mark class="highlight-orange_background"><strong>Don’t skip these…)</strong></mark></h3><ul id="6c8b41ce-f318-4310-be28-d524155bde44" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://codepen.io/codifiedconcepts/pen/bwgxRq">JavaScript Clock</a></mark></li></ul><ul id="9b227818-e54b-4f54-a596-f4d58b7f284e" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/cphemm/pen/reNwWd">Javascript Tip Calculator</a></li></ul><ul id="d5e1cfc3-0cec-4a8a-a12e-cb1af67ff3ec" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/cphemm/pen/reNwWd">Animated Nav Toggle &amp; Menu</a></li></ul><ul id="74f4790d-c4fd-403c-959f-22dda0d4d2dd" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/aomyers/pen/LWOwpR">CodePen Home Interactive Map with Jquery BY Sara B.</a></li></ul><ul id="b1110b5b-0e91-41c0-a2c3-c8c6419e8a4e" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/TheCodeDepository/pen/jKBaoN?page=8">CodePen Home Pickle Rick Maze Game</a></li></ul><ul id="357053bd-5a9f-4bf2-862d-799d00b490fa" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/b4rb4tron/pen/wjyXNJ">Happy bouncing balls</a></li></ul><ul id="ff4f2219-690b-462c-960f-be3e51bf6651" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/nswamy14/pen/MXoZjg?page=1&amp;">CodePen Home I2Djs - SVG - Infinite rainbow</a></li></ul><ul id="9f2e5b7f-1121-458a-8876-9f47c3e3afd0" class="block-color-yellow bulleted-list"><li><a href="https://codepen.io/JohnPaulFich/pen/MXmzzM">TO-do list</a></li></ul><p id="69f8bd27-349c-454f-93a6-e954fc6eb5ba" class="">
+</p><h3 id="b3098d4e-af2e-4557-9ad8-7e9f343b30e7" class=""><mark class="highlight-orange_background">Advanced Projects</mark></h3><p id="a7ece075-ac3e-4ed7-a7ca-91ea804a1a32" class="">The projects listed below are open-source projects so you can definitely study them and use the code….who knows you might end up with something new of your own? 😎</p><ul id="1d054fdc-d77a-4661-95a8-e64626f875b7" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://github.com/prettier/prettier">PRETTIER</a></mark><mark class="highlight-yellow"> </mark>- Code formatter.</li></ul><ul id="26af18a0-fbb2-400e-a08a-bd78ec53e5e8" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://terminalizer.com/">Terminalizer</a></mark> - Make gifs of your code in terminal for tutorials for blogs.</li></ul><ul id="a91696ed-69cd-4b47-9d8e-64d8ef3c2b57" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://zelark.github.io/nano-id-cc/">NANO ID</a></mark><mark class="highlight-yellow"> </mark>- Random number generator</li></ul><ul id="f966978f-f79f-4173-8e61-60834e2849f1" class="bulleted-list"><li><mark class="highlight-yellow"><a href="http://webpackmonitor.com/">Web pack Monitor</a></mark><mark class="highlight-yellow"> -</mark> The Ultimate Optimization Tool For Modern Web Development</li></ul><ul id="068bc8b2-d0bb-475f-891c-5e013ec0eebe" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://maptalks.org/index.html">Map talk</a></mark><mark class="highlight-yellow"> -</mark> An open-source javascript library for integrated 2D/3D maps.</li></ul><ul id="ccd714a1-0e3f-465c-83fd-cf8ab1864f3e" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://parceljs.org/">Parcel</a></mark><mark class="highlight-yellow"> </mark>- Blazing fast, zero configuration web application bundler</li></ul><ul id="9fff37e0-8efd-4a62-b502-fd2405e7b4a4" class="bulleted-list"><li><mark class="highlight-yellow"><a href="https://tonejs.github.io/">Tone.js</a></mark> - Tone.js is a Web Audio framework for creating interactive music in the browser.</li></ul><p id="9a8a47f9-9abd-4324-9e3e-3d8c23d0103f" class="">
+</p><p id="fa457ca8-825e-4709-8a46-09f7310944ed" class="">
+</p><hr id="945af528-e116-4a26-8664-7f57de402c03"/><h3 id="77d36807-8943-469a-946b-33935b6ad563" class="block-color-orange_background">🚩 Important projects with videos</h3><p id="6aa1d5ed-c779-4fa6-a7aa-d77887434e34" class=""><strong>Do not skip these even if it takes extra 20 days :)</strong></p><ul id="4a12edf0-6b11-4275-9000-e226bdb43ff6" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=n1mdAPFq2Os">Build a social media app (MERNG Stack)</a></li></ul><ul id="e6acf1b0-6420-4d83-b0ae-c0ad71c97bac" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=1hPgQWbWmEk&amp;list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&amp;index=3">Instagram Clone</a></li></ul><ul id="1eb79d03-7ff0-4e01-be3c-383746801289" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=7CqJlxBYj-M&amp;list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&amp;index=4">Learn MERN Stack</a></li></ul><ul id="d365bccc-d7dd-40bf-9590-e5d2d6d570e5" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=aoQ6S1a32j8&amp;list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&amp;index=19">Landing page using HTML CSS AND JS</a></li></ul><ul id="da9719cf-2c80-4ccc-a686-ee089d34ab3b" class="block-color-yellow bulleted-list"><li><a href="https://www.youtube.com/watch?v=mrHNSanmqQ4&amp;list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&amp;index=28">Mern Stack Course - Convert backend to serverless</a></li></ul><ul id="026a8571-8258-4df7-ab87-c6272c0c7df6" class="block-color-yellow bulleted-list"><li><a href="https://university.mongodb.com/courses/catalog">Free Official MongoDB Courses</a></li></ul><p id="ededc814-5dce-4898-a20c-14040dce3f56" class="">
+</p><p id="2755e15e-5d85-47c0-bd04-a3defb36b37c" class="">
+</p><h2 id="ac774b73-e121-4171-959a-b7a155a96dcd" class="">🗓 Schedule</h2><div id="0ed783c5-a241-49e5-9ca3-d3488c85e729" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Day/Days</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Hours</th></tr></thead><tbody><tr id="50792108-3369-4354-8c7c-36718aec1581"><td class="cell-title"><a href="https://www.notion.so/86-90-50792108336943548c7c36718aec1581">86-90</a></td><td class="cell-qx`R">Select any 5 Codepen projects that you like</td></tr><tr id="2ce6ff21-d5b2-4180-ac82-b49b83ae0a72"><td class="cell-title"><a href="https://www.notion.so/90-100-2ce6ff21d5b24180ac82b49b83ae0a72">90-100</a></td><td class="cell-qx`R">Important projects with videos</td></tr><tr id="e36481cf-e3ea-4020-9123-4eef56f94a5f"><td class="cell-title"><a href="https://www.notion.so/Extra-days-e36481cfe3ea402091234eef56f94a5f">Extra days</a></td><td class="cell-qx`R">If left with extra days then - Advanced Projects</td></tr></tbody></table></div><hr id="4a4a0f04-3666-4502-8f4d-0452e26a4132"/><p id="a664973e-2604-4223-820a-3c75a6ce938e" class="">
+</p><p id="2940bac7-6253-4019-bfb0-e9c894f44ff5" class="">
+</p><h2 id="bf2ad994-d554-4444-9103-983a65f1079b" class="">A little Message.</h2><p id="664c28db-beb6-4a22-b24c-60306db9a47e" class="">
+</p><p id="c3b9c1b6-b449-42e5-bb62-b3f174934acc" class="">Hey Folks! The100!  Thanks for being among the first ones to contribute to our journey and letting us be a part of yours.</p><p id="496e9fe6-4003-44a6-a99b-7f0321d4eb44" class="">Heartfelt thanks ❤️ If you have stayed with us for 100days. We love your dedication and thanks for being a contributor to our mission: “Democratizing free learning”.</p><p id="ffc4fd72-9909-4736-996c-3614d7941dc9" class="">We will soon be setting up a form for your details and so that we can send you a cool certificate for your dedication, commitment and hard work throughout.</p><p id="861d709c-d2e2-4f24-a68b-4b5cc5ca2de4" class="">
+</p><p id="99a52b40-4898-4b96-b1a3-e56300d8cb5d" class="">Utkarsh </p><p id="52343e58-c04b-4849-8b79-e59772f037ad" class="">Founder 100days</p></div></article></body></html>
